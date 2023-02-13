@@ -46,6 +46,9 @@ jobs:
           git remote add openwrt https://github.com/coolsnowwolf/lede.git
           git pull openwrt master
           git remote -v
+          
+      - name: 创建 Debug Session
+        uses: csexton/debugger-action@master
 
       - name: Checkout OpenWrt
         uses: actions/checkout@v3
