@@ -41,8 +41,13 @@ jobs:
           sudo -E apt clean
           sudo -E timedatectl set-timezone "Asia/Shanghai"
           
+          
+      - name: 创建 Debug Session
+        uses: csexton/debugger-action@master
+          
       - name: 自定义插件主题
         run: |
+          pwd
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
@@ -50,9 +55,6 @@ jobs:
           git clone https://github.com/thinktip/luci-theme-neobird.git
           git clone https://github.com/rosywrt/luci-theme-rosy.git
           
-      - name: 创建 Debug Session
-        uses: csexton/debugger-action@master
-
       - name: Checkout OpenWrt
         uses: actions/checkout@v3
 
