@@ -57,12 +57,14 @@ jobs:
           
           
 
-
       - name: 更新 feeds
         run: |
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
+      
+      - name: 创建 Debug Session
+        uses: csexton/debugger-action@master
 
       - name: 生成配置文件
         run: |
@@ -186,6 +188,3 @@ jobs:
         with:
           name: OpenWrt_firmware
           path: ./bin/targets/
-          
-      - name: 创建 Debug Session
-        uses: csexton/debugger-action@master
