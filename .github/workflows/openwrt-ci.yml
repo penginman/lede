@@ -40,12 +40,15 @@ jobs:
           sudo -E apt -y autoremove --purge
           sudo -E apt clean
           sudo -E timedatectl set-timezone "Asia/Shanghai"
-
-      - name: 同步最新的源码
+          
+      - name: 自定义插件主题
         run: |
-          git remote add openwrt https://github.com/coolsnowwolf/lede.git
-          git pull openwrt master
-          git remote -v
+          cd package
+          mkdir openwrt-packages
+          cd openwrt-packages
+          git clone https://github.com/jerrykuku/luci-theme-argon.git
+          git clone https://github.com/thinktip/luci-theme-neobird.git
+          git clone https://github.com/rosywrt/luci-theme-rosy.git
           
       - name: 创建 Debug Session
         uses: csexton/debugger-action@master
@@ -123,7 +126,8 @@ jobs:
           # LuCI主题:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-argon=y
-          CONFIG_PACKAGE_luci-theme-netgear=y
+          CONFIG_PACKAGE_luci-theme-neobird=y
+          CONFIG_PACKAGE_luci-theme-rosy=y
           EOF
 
           # 常用软件包:
