@@ -73,9 +73,83 @@ jobs:
 
       - name: 生成配置文件
         run: |
-          # 直接上传到仓库了
+          rm -f ./.config*
+          touch ./.config
+          # X86 固件设置
+          cat >> .config <<EOF
+          CONFIG_TARGET_x86=y
+          CONFIG_TARGET_x86_64=y
+          CONFIG_TARGET_x86_64_DEVICE_generic=y
+          # CONFIG_PACKAGE_adbyby is not set
+          CONFIG_PACKAGE_bash=y
+          CONFIG_PACKAGE_coreutils-nohup=y
+          CONFIG_PACKAGE_dogcom=y
+          CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
+          # CONFIG_PACKAGE_iptables-mod-ipsec is not set
+          CONFIG_PACKAGE_iptables-mod-nfqueue=y
+          # CONFIG_PACKAGE_kmod-crypto-cbc is not set
+          # CONFIG_PACKAGE_kmod-crypto-deflate is not set
+          # CONFIG_PACKAGE_kmod-crypto-des is not set
+          # CONFIG_PACKAGE_kmod-crypto-echainiv is not set
+          # CONFIG_PACKAGE_kmod-crypto-hmac is not set
+          # CONFIG_PACKAGE_kmod-crypto-md5 is not set
+          # CONFIG_PACKAGE_kmod-ipsec is not set
+          CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
+          # CONFIG_PACKAGE_kmod-ipt-ipsec is not set
+          CONFIG_PACKAGE_kmod-ipt-nfqueue=y
+          # CONFIG_PACKAGE_kmod-iptunnel6 is not set
+          CONFIG_PACKAGE_kmod-nfnetlink-queue=y
+          CONFIG_PACKAGE_libcap-bin=y
+          CONFIG_PACKAGE_libcap-bin-capsh-shell="/bin/sh"
+          CONFIG_PACKAGE_libnetfilter-conntrack=y
+          CONFIG_PACKAGE_libnetfilter-queue=y
+          CONFIG_PACKAGE_libnfnetlink=y
+          CONFIG_PACKAGE_libruby=y
+          CONFIG_PACKAGE_libyaml=y
+          # CONFIG_PACKAGE_luci-app-adbyby-plus is not set
+          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_ShadowsocksR_Libev_Client is not set
+          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_ShadowsocksR_Libev_Server is not set
+          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Shadowsocks_Libev_Client is not set
+          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Shadowsocks_Libev_Server is not set
+          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Simple_Obfs is not set
+          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Socks_Server is not set
+          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Trojan is not set
+          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Xray is not set
+          # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
+          CONFIG_PACKAGE_luci-app-openclash=y
+          # CONFIG_PACKAGE_luci-app-vlmcsd is not set
+          # CONFIG_PACKAGE_luci-app-vsftpd is not set
+          # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Hysteria is not set
+          # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_ShadowsocksR_Libev_Server is not set
+          # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Trojan is not set
+          # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray is not set
+          # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray_plugin is not set
+          # CONFIG_PACKAGE_luci-app-xlnetacc is not set
+          CONFIG_PACKAGE_luci-theme-argon=y
+          CONFIG_PACKAGE_luci-theme-argon-mod=y
+          CONFIG_PACKAGE_luci-theme-material=y
+          CONFIG_PACKAGE_luci-theme-neobird=y
+          CONFIG_PACKAGE_luci-theme-netgear=y
+          CONFIG_PACKAGE_ruby=y
+          CONFIG_PACKAGE_ruby-bigdecimal=y
+          CONFIG_PACKAGE_ruby-date=y
+          CONFIG_PACKAGE_ruby-digest=y
+          CONFIG_PACKAGE_ruby-enc=y
+          CONFIG_PACKAGE_ruby-forwardable=y
+          CONFIG_PACKAGE_ruby-pstore=y
+          CONFIG_PACKAGE_ruby-psych=y
+          CONFIG_PACKAGE_ruby-stringio=y
+          CONFIG_PACKAGE_ruby-strscan=y
+          CONFIG_PACKAGE_ruby-yaml=y
+          # CONFIG_PACKAGE_strongswan is not set
+          CONFIG_PACKAGE_ua2f=y
+          CONFIG_PACKAGE_unzip=y
+          # CONFIG_PACKAGE_vlmcsd is not set
+          # CONFIG_PACKAGE_vsftpd-alt is not set
+          # CONFIG_PACKAGE_kmod-inet-diag is not set
+          EOF
+          sed -i 's/^[ \t]*//g' ./.config
           make defconfig
-          
 
       - name: 下载依赖包
         run: make download -j16
