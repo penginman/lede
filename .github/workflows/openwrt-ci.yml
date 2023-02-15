@@ -191,3 +191,9 @@ jobs:
         with:
           name: OpenWrt_firmware
           path: ./bin/targets/
+          
+      - name: Upload .config
+        uses: actions/upload-artifact@v3
+        with:
+          name: OpenWrt_firmware
+          path: .config
