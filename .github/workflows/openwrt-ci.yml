@@ -10,9 +10,9 @@ name: OpenWrt-CI
 on:
   schedule:
     - cron: 0 20 * * *
-  push:
-    branches: 
-      - master
+#   push:
+#     branches: 
+#       - master
 
 permissions:
   contents: read
@@ -60,6 +60,13 @@ jobs:
       - name: 更新 feeds
         run: |
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+          
+          # 添加自定义源
+          cat >> feeds.conf.default <<EOF
+          src-git kenzo https://github.com/kenzok8/openwrt-packages
+          src-git passwall https://github.com/xiaorouji/openwrt-passwall
+          EOF
+          
           ./scripts/feeds update -a
           ./scripts/feeds install -a
       
