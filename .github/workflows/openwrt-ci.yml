@@ -58,7 +58,7 @@ jobs:
           git clone https://github.com/rosywrt/luci-theme-rosy.git
           
       - name: 自己加点固件
-        run:
+        run: |
           git clone https://github.com/Zxilly/UA2F.git package/UA2F
           git clone https://github.com/mchome/openwrt-dogcom.git package/dogcom
 
