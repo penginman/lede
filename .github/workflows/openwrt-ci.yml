@@ -126,7 +126,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray_plugin is not set
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           CONFIG_PACKAGE_luci-theme-argon=y
-          CONFIG_PACKAGE_luci-theme-argon-mod=y
+          # CONFIG_PACKAGE_luci-theme-argon-mod is not set
           CONFIG_PACKAGE_luci-theme-material=y
           CONFIG_PACKAGE_luci-theme-neobird=y
           CONFIG_PACKAGE_luci-theme-netgear=y
