@@ -61,6 +61,7 @@ jobs:
         run: |
           git clone https://github.com/Zxilly/UA2F.git package/UA2F
           git clone https://github.com/mchome/openwrt-dogcom.git package/dogcom
+          git clone https://github.com/GJXS1980/ODP.git package/ODP
 
       - name: 更新 feeds
         run: |
