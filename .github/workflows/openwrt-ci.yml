@@ -84,7 +84,8 @@ jobs:
           # CONFIG_PACKAGE_adbyby is not set
           CONFIG_PACKAGE_bash=y
           CONFIG_PACKAGE_coreutils-nohup=y
-          CONFIG_PACKAGE_dogcom=y
+          CONFIG_PACKAGE_dogcom=m
+          CONFIG_PACKAGE_gdut-drcom=y
           CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
           # CONFIG_PACKAGE_iptables-mod-ipsec is not set
           CONFIG_PACKAGE_iptables-mod-nfqueue=y
@@ -127,10 +128,10 @@ jobs:
           # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray_plugin is not set
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           CONFIG_PACKAGE_luci-theme-argon=y
-          # CONFIG_PACKAGE_luci-theme-argon-mod is not set
           CONFIG_PACKAGE_luci-theme-material=y
           CONFIG_PACKAGE_luci-theme-neobird=y
           CONFIG_PACKAGE_luci-theme-netgear=y
+          CONFIG_PACKAGE_luci-theme-rosy=y
           CONFIG_PACKAGE_ruby=y
           CONFIG_PACKAGE_ruby-bigdecimal=y
           CONFIG_PACKAGE_ruby-date=y
