@@ -143,6 +143,7 @@ jobs:
           CONFIG_PACKAGE_ruby-stringio=y
           CONFIG_PACKAGE_ruby-strscan=y
           CONFIG_PACKAGE_ruby-yaml=y
+          CONFIG_PACKAGE_smartdns=y
           # CONFIG_PACKAGE_strongswan is not set
           CONFIG_PACKAGE_ua2f=y
           CONFIG_PACKAGE_unzip=y
