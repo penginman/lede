@@ -61,7 +61,6 @@ jobs:
         run: |
           git clone https://github.com/Zxilly/UA2F.git package/UA2F
           git clone https://github.com/mchome/openwrt-dogcom.git package/dogcom
-          git clone https://github.com/GJXS1980/ODP.git package/ODP
 
       - name: 更新 feeds
         run: |
@@ -85,7 +84,6 @@ jobs:
           CONFIG_PACKAGE_bash=y
           CONFIG_PACKAGE_coreutils-nohup=y
           CONFIG_PACKAGE_dogcom=m
-          CONFIG_PACKAGE_gdut-drcom=y
           CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
           # CONFIG_PACKAGE_iptables-mod-ipsec is not set
           CONFIG_PACKAGE_iptables-mod-nfqueue=y
