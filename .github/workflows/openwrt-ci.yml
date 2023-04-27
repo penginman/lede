@@ -49,7 +49,6 @@ jobs:
         
       - name: 自定义插件主题
         run: |
-          pwd
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
@@ -61,6 +60,8 @@ jobs:
         run: |
           git clone https://github.com/Zxilly/UA2F.git package/UA2F
           git clone https://github.com/mchome/openwrt-dogcom.git package/dogcom
+          git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git
+          
 
       - name: 更新 feeds
         run: |
@@ -117,6 +118,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Xray is not set
           # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
           CONFIG_PACKAGE_luci-app-openclash=y
+          CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
           # CONFIG_PACKAGE_luci-app-vlmcsd is not set
           # CONFIG_PACKAGE_luci-app-vsftpd is not set
           # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Hysteria is not set
