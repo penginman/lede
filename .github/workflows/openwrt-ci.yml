@@ -2905,21 +2905,21 @@ jobs:
           # CONFIG_PACKAGE_kmod-usb-net-asix is not set
           CONFIG_PACKAGE_kmod-usb-net-asix-ax88179=y
           # CONFIG_PACKAGE_kmod-usb-net-cdc-eem is not set
-          # CONFIG_PACKAGE_kmod-usb-net-cdc-ether is not set
+          CONFIG_PACKAGE_kmod-usb-net-cdc-ether=y
           # CONFIG_PACKAGE_kmod-usb-net-cdc-mbim is not set
           # CONFIG_PACKAGE_kmod-usb-net-cdc-ncm is not set
           # CONFIG_PACKAGE_kmod-usb-net-cdc-subset is not set
           # CONFIG_PACKAGE_kmod-usb-net-dm9601-ether is not set
           # CONFIG_PACKAGE_kmod-usb-net-hso is not set
           # CONFIG_PACKAGE_kmod-usb-net-huawei-cdc-ncm is not set
-          # CONFIG_PACKAGE_kmod-usb-net-ipheth is not set
+          CONFIG_PACKAGE_kmod-usb-net-ipheth=y
           # CONFIG_PACKAGE_kmod-usb-net-kalmia is not set
           # CONFIG_PACKAGE_kmod-usb-net-kaweth is not set
           # CONFIG_PACKAGE_kmod-usb-net-mcs7830 is not set
           # CONFIG_PACKAGE_kmod-usb-net-pegasus is not set
           # CONFIG_PACKAGE_kmod-usb-net-pl is not set
-          # CONFIG_PACKAGE_kmod-usb-net-qmi-wwan is not set
-          # CONFIG_PACKAGE_kmod-usb-net-rndis is not set
+          CONFIG_PACKAGE_kmod-usb-net-qmi-wwan=y
+          CONFIG_PACKAGE_kmod-usb-net-rndis=y
           CONFIG_PACKAGE_kmod-usb-net-rtl8150=y
           # CONFIG_PACKAGE_kmod-usb-net-rtl8152 is not set
           CONFIG_PACKAGE_kmod-usb-net-rtl8152-vendor=y
@@ -2956,7 +2956,7 @@ jobs:
           CONFIG_PACKAGE_kmod-usb-storage-extras=y
           CONFIG_PACKAGE_kmod-usb-storage-uas=y
           # CONFIG_PACKAGE_kmod-usb-uhci is not set
-          # CONFIG_PACKAGE_kmod-usb-wdm is not set
+          CONFIG_PACKAGE_kmod-usb-wdm=y
           # CONFIG_PACKAGE_kmod-usb-yealink is not set
           # CONFIG_PACKAGE_kmod-usb2 is not set
           # CONFIG_PACKAGE_kmod-usb2-pci is not set
