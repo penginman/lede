@@ -81,6 +81,8 @@ jobs:
           touch ./.config
           # X86 固件设置
           cat >> .config <<EOF
+          
+
           #
           # Automatically generated file; DO NOT EDIT.
           # OpenWrt Configuration
@@ -5131,8 +5133,8 @@ jobs:
           # 4. Themes
           #
           CONFIG_PACKAGE_luci-theme-argon=y
-          CONFIG_PACKAGE_luci-theme-argon-mod=y
-          CONFIG_PACKAGE_luci-theme-argone=y
+          # CONFIG_PACKAGE_luci-theme-argon-mod is not set
+          # CONFIG_PACKAGE_luci-theme-argone is not set
           CONFIG_PACKAGE_luci-theme-atmaterial_new=y
           CONFIG_PACKAGE_luci-theme-bootstrap=y
           CONFIG_PACKAGE_luci-theme-design=m
@@ -7457,6 +7459,9 @@ jobs:
           # CONFIG_PACKAGE_fontconfig is not set
           # end of Font-Utils
           # end of Xorg
+
+
+
 
           EOF
           sed -i 's/^[ \t]*//g' ./.config
