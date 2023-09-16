@@ -56,7 +56,7 @@ jobs:
           git clone https://github.com/jerrykuku/luci-theme-argon.git
           git clone https://github.com/thinktip/luci-theme-neobird.git
           git clone https://github.com/rosywrt/luci-theme-rosy.git
-          git clone https://github.com/gngpp/luci-theme-design.git  package/luci-theme-design
+          git clone https://github.com/gngpp/luci-theme-design.git
           git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
           
       - name: 自己加点固件
@@ -2123,10 +2123,10 @@ jobs:
           # CONFIG_PACKAGE_rtl8723au-firmware is not set
           # CONFIG_PACKAGE_rtl8723bu-firmware is not set
           # CONFIG_PACKAGE_rtl8723du-firmware is not set
-          # CONFIG_PACKAGE_rtl8821ae-firmware is not set
-          # CONFIG_PACKAGE_rtl8821ce-firmware is not set
-          # CONFIG_PACKAGE_rtl8822be-firmware is not set
-          # CONFIG_PACKAGE_rtl8822ce-firmware is not set
+          CONFIG_PACKAGE_rtl8821ae-firmware=y
+          CONFIG_PACKAGE_rtl8821ce-firmware=y
+          CONFIG_PACKAGE_rtl8822be-firmware=m
+          CONFIG_PACKAGE_rtl8822ce-firmware=m
           # CONFIG_PACKAGE_station-p2-firmware is not set
           # CONFIG_PACKAGE_ti-3410-firmware is not set
           # CONFIG_PACKAGE_ti-5052-firmware is not set
@@ -3090,27 +3090,29 @@ jobs:
           # CONFIG_PACKAGE_kmod-rt2800-pci is not set
           # CONFIG_PACKAGE_kmod-rt2800-usb is not set
           # CONFIG_PACKAGE_kmod-rt2x00-lib is not set
-          CONFIG_PACKAGE_kmod-rtl8188eu=y
-          CONFIG_PACKAGE_kmod-rtl8192c-common=y
-          CONFIG_PACKAGE_kmod-rtl8192ce=y
-          CONFIG_PACKAGE_kmod-rtl8192cu=y
-          CONFIG_PACKAGE_kmod-rtl8192de=y
-          CONFIG_PACKAGE_kmod-rtl8192eu=y
-          CONFIG_PACKAGE_kmod-rtl8192se=y
+          CONFIG_PACKAGE_kmod-rtl8188eu=m
+          CONFIG_PACKAGE_kmod-rtl8192c-common=m
+          CONFIG_PACKAGE_kmod-rtl8192ce=m
+          CONFIG_PACKAGE_kmod-rtl8192cu=m
+          CONFIG_PACKAGE_kmod-rtl8192de=m
+          CONFIG_PACKAGE_kmod-rtl8192eu=m
+          CONFIG_PACKAGE_kmod-rtl8192se=m
           # CONFIG_PACKAGE_kmod-rtl8723bs is not set
           # CONFIG_PACKAGE_kmod-rtl8723du is not set
           # CONFIG_PACKAGE_kmod-rtl8812au-ac is not set
           # CONFIG_PACKAGE_kmod-rtl8812au-ct is not set
-          # CONFIG_PACKAGE_kmod-rtl8821ae is not set
-          # CONFIG_PACKAGE_kmod-rtl8821cu is not set
-          # CONFIG_PACKAGE_kmod-rtl8822bu is not set
-          # CONFIG_PACKAGE_kmod-rtl8822cu is not set
-          # CONFIG_PACKAGE_kmod-rtl8xxxu is not set
+          CONFIG_PACKAGE_kmod-rtl8821ae=y
+          CONFIG_PACKAGE_kmod-rtl8821cu=y
+          CONFIG_PACKAGE_kmod-rtl8822bu=m
+          CONFIG_PACKAGE_kmod-rtl8822cu=m
+          CONFIG_PACKAGE_kmod-rtl8xxxu=y
           CONFIG_PACKAGE_kmod-rtlwifi=y
           # CONFIG_PACKAGE_RTLWIFI_DEBUG is not set
+          CONFIG_PACKAGE_kmod-rtlwifi-btcoexist=y
           CONFIG_PACKAGE_kmod-rtlwifi-pci=y
-          CONFIG_PACKAGE_kmod-rtlwifi-usb=y
+          CONFIG_PACKAGE_kmod-rtlwifi-usb=m
           # CONFIG_PACKAGE_kmod-rtw88 is not set
+          CONFIG_PACKAGE_kmod-rtw88-usb=y
           # CONFIG_PACKAGE_kmod-wil6210 is not set
           # CONFIG_PACKAGE_kmod-wl12xx is not set
           # CONFIG_PACKAGE_kmod-wl18xx is not set
@@ -4990,7 +4992,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-https-dns-proxy is not set
           # CONFIG_PACKAGE_luci-app-ikoolproxy is not set
           # CONFIG_PACKAGE_luci-app-ipsec-server is not set
-          CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
+          # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
           # CONFIG_PACKAGE_luci-app-kodexplorer is not set
           # CONFIG_PACKAGE_luci-app-koolproxyR is not set
           # CONFIG_PACKAGE_luci-app-lucky is not set
@@ -5280,7 +5282,6 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-firewall-vi is not set
           CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
           # CONFIG_PACKAGE_luci-i18n-firewall-zh-tw is not set
-          CONFIG_PACKAGE_luci-i18n-ipsec-vpnd-zh-cn=y
           # CONFIG_PACKAGE_luci-i18n-nlbwmon-ja is not set
           # CONFIG_PACKAGE_luci-i18n-nlbwmon-ru is not set
           CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
@@ -6280,7 +6281,7 @@ jobs:
           # CONFIG_WPA_WOLFSSL is not set
           # CONFIG_DRIVER_WEXT_SUPPORT is not set
           CONFIG_DRIVER_11N_SUPPORT=y
-          # CONFIG_DRIVER_11AC_SUPPORT is not set
+          CONFIG_DRIVER_11AC_SUPPORT=y
           # CONFIG_DRIVER_11AX_SUPPORT is not set
           # CONFIG_WPA_ENABLE_WEP is not set
           # CONFIG_PACKAGE_wpa-supplicant-basic is not set
@@ -7459,6 +7460,7 @@ jobs:
           # CONFIG_PACKAGE_fontconfig is not set
           # end of Font-Utils
           # end of Xorg
+
 
 
 
