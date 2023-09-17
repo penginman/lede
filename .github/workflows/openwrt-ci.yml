@@ -3110,7 +3110,7 @@ jobs:
           # CONFIG_PACKAGE_RTLWIFI_DEBUG is not set
           CONFIG_PACKAGE_kmod-rtlwifi-btcoexist=y
           CONFIG_PACKAGE_kmod-rtlwifi-pci=y
-          CONFIG_PACKAGE_kmod-rtlwifi-usb=m
+          CONFIG_PACKAGE_kmod-rtlwifi-usb=y
           # CONFIG_PACKAGE_kmod-rtw88 is not set
           CONFIG_PACKAGE_kmod-rtw88-usb=y
           # CONFIG_PACKAGE_kmod-wil6210 is not set
