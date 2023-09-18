@@ -5,7 +5,7 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 
 # 自己添加
 src-git kenzo https://github.com/kenzok8/openwrt-packages
-src-git passwall https://github.com/xiaorouji/openwrt-passwall
+src-git small https://github.com/kenzok8/small
 
 #src-git helloworld https://github.com/fw876/helloworld.git
 #src-git oui https://github.com/zhaojh329/oui.git
