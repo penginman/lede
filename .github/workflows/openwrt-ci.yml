@@ -596,7 +596,7 @@ jobs:
           CONFIG_LIBC="musl"
           CONFIG_TARGET_SUFFIX="musl"
           # CONFIG_IB is not set
-          # CONFIG_SDK is not set
+          CONFIG_SDK=y
           # CONFIG_MAKE_TOOLCHAIN is not set
           # CONFIG_IMAGEOPT is not set
           # CONFIG_PREINITOPT is not set
@@ -7686,6 +7686,7 @@ jobs:
           # CONFIG_PACKAGE_fontconfig is not set
           # end of Font-Utils
           # end of Xorg
+
 
 
 
